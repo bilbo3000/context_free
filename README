@@ -1,0 +1,50 @@
+Context-Free Languages Evaluator
+
+Dongpu Jin
+11/25/2013
+
+How to build and run the project? 
+
+1. Put the zip file 'djin-project2.zip' to a directory on cse and unzip it: 
+
+    $ unzip djin-project2.zip
+
+2. Go to resulting directory 'context_free': 
+
+    $ cd context_free
+
+3. Build the project: 
+
+    $ ant
+
+4. Run the project with an input (let's run q1.txt as an example): 
+
+    $ java -jar ./build/jar/context_free.jar < ./input/q1.txt
+
+The output would look something like: 
+
+yes
+yes
+yes
+yes
+no
+no
+
+
+Source code description: 
+
+-- context_free/build.xml
+    The ant build file that build the project and generate 
+    executable jar file. 
+
+-- context_free/src/edu/unl/cse/cfl/driver/Driver.java
+    The driver class of this project that initiate the process. 
+
+-- context_free/src/edu/unl/cse/cfl/cfg/CFG.java
+    The class that build contest-free grammar.  
+
+-- context_free/src/edu/unl/cse/cfl/pda/PDA.java
+    Simulates a PDA with given context-free grammar.   
+
+-- context_free/src/edu/unl/cse/cfl/utils/*
+    Various utility classes including terminal, variable, and input file reader. 
